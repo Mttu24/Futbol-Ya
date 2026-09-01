@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ligas - Fútbol Ya</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <header class="header">
+
+        <div class="logo">
+            ⚽ Fútbol Ya
+        </div>
+
+
+        <nav class="nav">
+
+            <a href="/">Partidos</a>
+
+            <a href="/ligas">Ligas</a>
+
+            <a href="#">Equipos</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <main class="container">
+
+
+        <h2 class="section-title">
+            🏆 Ligas
+        </h2>
+
+
+        <div class="matches">
+
+
+            <a href="/liga/argentina" style="text-decoration: none; color: inherit;">
+
+    <div class="match-card">
+
+        <div class="competition">
+            🇦🇷 Argentina
+        </div>
+
+        <h3>
+            Liga Profesional
+        </h3>
+
+    </div>
+
+</a>
+
+
+            <div class="match-card">
+
+                <div class="competition">
+                    🇪🇸 España
+                </div>
+
+                <h3>
+                    La Liga
+                </h3>
+
+            </div>
+
+
+            <div class="match-card">
+
+                <div class="competition">
+                    🏴 Inglaterra
+                </div>
+
+                <h3>
+                    Premier League
+                </h3>
+
+            </div>
+
+
+            <div class="match-card">
+
+                <div class="competition">
+                    🇮🇹 Italia
+                </div>
+
+                <h3>
+                    Serie A
+                </h3>
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+</body>
+
+</html>

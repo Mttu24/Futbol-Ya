@@ -1,0 +1,97 @@
+{
+    "river": {
+        "nombre": "River Plate",
+        "pais": "Argentina",
+        "estadio": "Estadio Monumental",
+        "dt": "Marcelo Gallardo",
+        "competicion": "Liga Profesional",
+        "pj": 20,
+        "pg": 13,
+        "pe": 3,
+        "pp": 4,
+        "gf": 35,
+        "gc": 15,
+        "dg": 20,
+        "puntos": 42
+    },
+
+    "boca": {
+        "nombre": "Boca Juniors",
+        "pais": "Argentina",
+        "estadio": "La Bombonera",
+        "dt": "Director técnico",
+        "competicion": "Liga Profesional",
+        "pj": 20,
+        "pg": 12,
+        "pe": 3,
+        "pp": 5,
+        "gf": 32,
+        "gc": 18,
+        "dg": 14,
+        "puntos": 39
+    },
+
+    "racing": {
+        "nombre": "Racing Club",
+        "pais": "Argentina",
+        "estadio": "Presidente Perón",
+        "dt": "Director técnico",
+        "competicion": "Liga Profesional",
+        "pj": 20,
+        "pg": 11,
+        "pe": 4,
+        "pp": 5,
+        "gf": 30,
+        "gc": 19,
+        "dg": 11,
+        "puntos": 37
+    },
+
+    "talleres": {
+        "nombre": "Talleres",
+        "pais": "Argentina",
+        "estadio": "Mario Alberto Kempes",
+        "dt": "Director técnico",
+        "competicion": "Liga Profesional",
+        "pj": 20,
+        "pg": 10,
+        "pe": 5,
+        "pp": 5,
+        "gf": 28,
+        "gc": 20,
+        "dg": 8,
+        "puntos": 35
+    },
+
+    "san-lorenzo": {
+        "nombre": "San Lorenzo",
+        "pais": "Argentina",
+        "estadio": "Pedro Bidegain",
+        "dt": "Director técnico",
+        "competicion": "Liga Profesional",
+        "pj": 20,
+        "pg": 9,
+        "pe": 6,
+        "pp": 5,
+        "gf": 25,
+        "gc": 18,
+        "dg": 7,
+        "puntos": 33
+    },
+
+    "independiente": {
+        "nombre": "Independiente",
+        "pais": "Argentina",
+        "estadio": "Libertadores de América",
+        "dt": "Director técnico",
+        "competicion": "Liga Profesional",
+        "pj": 20,
+        "pg": 8,
+        "pe": 7,
+        "pp": 5,
+        "gf": 24,
+        "gc": 19,
+        "dg": 5,
+        "puntos": 31
+    }
+}

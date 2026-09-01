@@ -1,0 +1,431 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #1f2937;
+}
+
+
+/* =========================
+   BARRA SUPERIOR
+========================= */
+
+.header {
+    background: #111827;
+    color: white;
+    padding: 18px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav a:hover {
+    opacity: 0.7;
+}
+
+
+/* =========================
+   CONTENIDO PRINCIPAL
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+
+/* =========================
+   TITULOS
+========================= */
+
+.section-title {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+
+/* =========================
+   PARTIDOS
+========================= */
+
+.matches {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.match-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.2s;
+}
+
+.match-card:hover {
+    transform: translateY(-3px);
+}
+
+.competition {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 15px;
+}
+
+.teams {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-weight: bold;
+}
+
+.score {
+    font-size: 20px;
+}
+
+.status {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #16a34a;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 15px 20px;
+    }
+
+    .nav {
+        gap: 12px;
+    }
+
+    .nav a {
+        font-size: 13px;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+}
+/* =========================
+   TABLA DE POSICIONES
+========================= */
+
+.table-container {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #111827;
+    color: white;
+    text-align: left;
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background: #f9fafb;
+}
+/* =========================
+   LEYENDA
+========================= */
+
+.legend {
+    display: flex;
+    gap: 25px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.legend div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+
+.libertadores-color {
+    background: #16a34a;
+}
+
+.sudamericana-color {
+    background: #2563eb;
+}
+/* =========================
+   FORMACIÓN
+========================= */
+
+.formation {
+    margin-top: 20px;
+}
+
+.pitch {
+    position: relative;
+
+    width: 100%;
+    max-width: 700px;
+
+    height: 650px;
+
+    margin: 0 auto;
+
+    background: #15803d;
+
+    border: 4px solid white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+
+/* LÍNEA CENTRAL */
+
+.pitch::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    top: 50%;
+
+    height: 2px;
+
+    background: white;
+
+    transform: translateY(-50%);
+}
+
+
+/* CÍRCULO CENTRAL */
+
+.pitch::after {
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+
+    height: 120px;
+
+    border: 2px solid white;
+
+    border-radius: 50%;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* JUGADORES */
+
+.player {
+    position: absolute;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    font-weight: bold;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+    z-index: 2;
+}
+
+.player-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #111827;
+
+    border: 3px solid rgba(255, 255, 255, 0.8);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
+
+    margin-bottom: 4px;
+}
+
+.player span {
+    font-size: 11px;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    padding: 3px 7px;
+
+    border-radius: 5px;
+
+    white-space: nowrap;
+}
+
+.player small {
+    font-size: 9px;
+
+    margin-top: 2px;
+
+    opacity: 0.85;
+}
+
+
+/* ARQUERO */
+
+.goalkeeper {
+    left: 50%;
+    bottom: 8%;
+}
+
+
+/* DEFENSORES */
+
+.d1 {
+    left: 12%;
+    bottom: 27%;
+}
+
+.d2 {
+    left: 37%;
+    bottom: 25%;
+}
+
+.d3 {
+    left: 63%;
+    bottom: 25%;
+}
+
+.d4 {
+    left: 88%;
+    bottom: 27%;
+}
+
+
+/* MEDIOCAMPISTAS */
+
+.m1 {
+    left: 25%;
+    top: 48%;
+}
+
+.m2 {
+    left: 50%;
+    top: 52%;
+}
+
+.m3 {
+    left: 75%;
+    top: 48%;
+}
+
+
+/* DELANTEROS */
+
+.f1 {
+    left: 25%;
+    top: 20%;
+}
+
+.f2 {
+    left: 50%;
+    top: 14%;
+}
+
+.f3 {
+    left: 75%;
+    top: 20%;
+}
+.table-container a {
+    color: inherit;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: opacity 0.2s;
+}
+
+.table-container a:hover {
+    opacity: 0.7;
+}

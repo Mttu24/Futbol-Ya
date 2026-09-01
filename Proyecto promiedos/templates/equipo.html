@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ equipo.nombre }} - Fútbol Ya</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <header class="header">
+
+        <div class="logo">
+            ⚽ Fútbol Ya
+        </div>
+
+        <nav class="nav">
+
+            <a href="/">Partidos</a>
+
+            <a href="/ligas">Ligas</a>
+
+            <a href="#">Equipos</a>
+
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <!-- INFORMACIÓN DEL EQUIPO -->
+
+        <section class="team-header">
+
+            <div class="team-icon">
+                🛡️
+            </div>
+
+            <div>
+
+                <h1>
+                    {{ equipo.nombre }}
+                </h1>
+
+                <p>
+                    🇦🇷 {{ equipo.pais }}
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- INFORMACIÓN -->
+
+        <section class="team-info">
+
+            <div class="info-card">
+
+                <span>🏟️</span>
+
+                <div>
+
+                    <small>Estadio</small>
+
+                    <strong>
+                        {{ equipo.estadio }}
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <span>👔</span>
+
+                <div>
+
+                    <small>Director técnico</small>
+
+                    <strong>
+                        {{ equipo.dt }}
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <span>🏆</span>
+
+                <div>
+
+                    <small>Competición</small>
+
+                    <strong>
+                        {{ equipo.competicion }}
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ESTADÍSTICAS -->
+
+        <h2 class="section-title">
+            📊 Temporada 2026
+        </h2>
+
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <strong>
+                    {{ equipo.pj }}
+                </strong>
+
+                <span>
+                    Partidos
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <strong>
+                    {{ equipo.pg }}
+                </strong>
+
+                <span>
+                    Ganados
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <strong>
+                    {{ equipo.pe }}
+                </strong>
+
+                <span>
+                    Empatados
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <strong>
+                    {{ equipo.pp }}
+                </strong>
+
+                <span>
+                    Perdidos
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- PLANTEL -->
+
+        <h2 class="section-title">
+            👥 Plantel
+        </h2>
+
+
+        <section class="squad">
+
+            {% for jugador in plantel %}
+
+            <div class="player-card">
+
+                <div class="player-number">
+                    {{ jugador.numero }}
+                </div>
+
+                <div>
+
+                    <strong>
+                        {{ jugador.nombre }}
+                    </strong>
+
+                    <span>
+                        {{ jugador.posicion }}
+                    </span>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </section>
+
+
+        <!-- FORMACIÓN -->
+
+        <h2 class="section-title">
+            ⚽ Formación
+        </h2>
+
+
+        <section class="formation">
+
+            <div class="pitch">
+
+
+                {% for jugador in formacion %}
+
+
+                <div class="player {{ jugador.clase }}">
+
+    <div class="player-icon">
+        {{ jugador.numero }}
+    </div>
+
+    <span>
+        {{ jugador.nombre }}
+    </span>
+
+    <small>
+        {{ jugador.posicion }}
+    </small>
+
+</div>
+
+
+                {% endfor %}
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+</body>
+
+</html>

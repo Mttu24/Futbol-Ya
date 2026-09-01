@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Liga Profesional - Fútbol Ya</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <header class="header">
+
+        <div class="logo">
+            ⚽ Fútbol Ya
+        </div>
+
+        <nav class="nav">
+
+            <a href="/">Partidos</a>
+
+            <a href="/ligas">Ligas</a>
+
+            <a href="#">Equipos</a>
+
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <h1>
+            🇦🇷 Liga Profesional Argentina
+        </h1>
+
+
+        <p>
+            Tabla de posiciones
+        </p>
+
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>#</th>
+                        <th>Equipo</th>
+                        <th>PJ</th>
+                        <th>PG</th>
+                        <th>PE</th>
+                        <th>PP</th>
+                        <th>GF</th>
+                        <th>GC</th>
+                        <th>DG</th>
+                        <th>Pts</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    {% for equipo in equipos %}
+
+                    <tr class="
+                        {% if equipo.posicion <= 3 %}
+                            libertadores
+                        {% elif equipo.posicion <= 9 %}
+                            sudamericana
+                        {% endif %}
+                    ">
+
+                        <td>
+                            {{ equipo.posicion }}
+                        </td>
+
+                        <td>
+
+    <a href="/equipo/{{ equipo.slug }}">
+    {{ equipo.equipo }}
+</a>
+
+</td>
+
+                        <td>{{ equipo.pj }}</td>
+                        <td>{{ equipo.pg }}</td>
+                        <td>{{ equipo.pe }}</td>
+                        <td>{{ equipo.pp }}</td>
+                        <td>{{ equipo.gf }}</td>
+                        <td>{{ equipo.gc }}</td>
+                        <td>{{ equipo.dg }}</td>
+
+                        <td>
+                            <strong>
+                                {{ equipo.puntos }}
+                            </strong>
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="legend">
+
+            <div>
+                <span class="legend-color libertadores-color"></span>
+                Libertadores
+            </div>
+
+            <div>
+                <span class="legend-color sudamericana-color"></span>
+                Sudamericana
+            </div>
+
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>

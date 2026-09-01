@@ -1,0 +1,68 @@
+{
+    "arqueros": [
+        {
+            "nombre": "Franco Armani",
+            "numero": 1,
+            "posicion": "ARQ"
+        }
+    ],
+
+    "defensores": [
+        {
+            "nombre": "Fabricio Bustos",
+            "numero": 16,
+            "posicion": "LD"
+        },
+        {
+            "nombre": "Germán Pezzella",
+            "numero": 6,
+            "posicion": "DFC"
+        },
+        {
+            "nombre": "Paulo Díaz",
+            "numero": 17,
+            "posicion": "DFC"
+        },
+        {
+            "nombre": "Marcos Acuña",
+            "numero": 24,
+            "posicion": "LI"
+        }
+    ],
+
+    "mediocampistas": [
+        {
+            "nombre": "Enzo Pérez",
+            "numero": 5,
+            "posicion": "MC"
+        },
+        {
+            "nombre": "Manuel Lanzini",
+            "numero": 10,
+            "posicion": "MC"
+        },
+        {
+            "nombre": "Franco Mastantuono",
+            "numero": 30,
+            "posicion": "MC"
+        }
+    ],
+
+    "delanteros": [
+        {
+            "nombre": "Pablo Solari",
+            "numero": 36,
+            "posicion": "ED"
+        },
+        {
+            "nombre": "Miguel Borja",
+            "numero": 9,
+            "posicion": "DC"
+        },
+        {
+            "nombre": "Facundo Colidio",
+            "numero": 11,
+            "posicion": "EI"
+        }
+    ]
+}

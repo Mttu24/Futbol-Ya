@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fútbol Ya</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- BARRA SUPERIOR -->
+
+    <header class="header">
+
+        <div class="logo">
+            ⚽ Fútbol Ya
+        </div>
+
+        <nav class="nav">
+            <a href="#">Partidos</a>
+            <a href="/ligas">Ligas</a>
+            <a href="#">Equipos</a>
+        </nav>
+
+    </header>
+
+
+    <!-- CONTENIDO -->
+
+    <main class="container">
+
+        <h2 class="section-title">
+            🔴 Partidos destacados
+        </h2>
+
+
+        <div class="matches">
+
+    {% for partido in partidos %}
+
+        <div class="match-card">
+
+            <div class="competition">
+                {{ partido.competicion }}
+            </div>
+
+            <div class="teams">
+
+                <span>
+                    {{ partido.local }}
+                </span>
+
+                <span class="score">
+                    {{ partido.resultado }}
+                </span>
+
+                <span>
+                    {{ partido.visitante }}
+                </span>
+
+            </div>
+
+            <div class="status">
+                {{ partido.estado }}
+            </div>
+
+        </div>
+
+    {% endfor %}
+
+</div>
+
+    </main>
+
+</body>
+
+</html>
