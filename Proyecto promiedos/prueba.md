@@ -3,7 +3,7 @@
 ## Caso de Uso 1: Buscar película por título
 
 * **Quién lo usa:** El usuario.
-* **Para qué sirve:** Para buscar películas escribiendo solo una parte del nombre, sin tener que poner el título completo.
+* **Para qué sirve:** Para buscar películas escribiendo el nombre completo o solo una parte sin tener que poner el título completo.
 * **Qué se necesita antes:** Que las películas estén cargadas en el sistema.
 
 ### Pasos
